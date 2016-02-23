@@ -1,5 +1,3 @@
-global.THREE = require('three');
-
 const createApp = require('./app');
 const createLoop = require('raf-loop');
 const glslify = require('glslify');
@@ -84,13 +82,15 @@ function setupScene () {
 
     var position2 = renderGeometry.getAttribute('offset');
 
-    // Compute the motion shader into renderGeometry "position" attribute
+    // Animate vertex positions
     dataMaterial.uniforms.animation.value = time;
-    // dataMaterial.uniforms.uPos.value.set(Math.sin(time) * 1000, 0, 0);
+
+    // Compute new vertex positions with transform feedback
     renderer.setTransformFeedback([ position2 ]);
     renderer.render(dataScene, camera);
     renderer.setTransformFeedback(null);
 
+    // Render instanced meshes
     renderer.render(scene, camera);
   }).start(); 
 }
