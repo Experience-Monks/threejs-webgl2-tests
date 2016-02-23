@@ -1,6 +1,18 @@
 # threejs-webgl2-tests
 
-Work in progress – testbed for WebGL2 + ThreeJS.
+## to run tests
+
+```sh
+git clone https://github.com/Jam3/threejs-webgl2-tests.git
+
+cd threejs-webgl2-tests
+
+npm install
+
+npm start
+```
+
+Then open `localhost:9966` in FireFox Nightly.
 
 ## License
 
