@@ -53,7 +53,6 @@ function createApp (opt = {}) {
     camera.position.fromArray(controls.position);
     camera.up.fromArray(controls.up);
     camera.lookAt(target.fromArray(controls.direction));
-    renderer.render(scene, camera);
 
     // Update camera matrices
     camera.aspect = aspect;
