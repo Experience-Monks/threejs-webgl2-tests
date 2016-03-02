@@ -39,7 +39,7 @@
   },
   "scripts": {
     "test": "semistandard && node test.js",
-    "start": "budo index.js:bundle.js --live"
+    "start": "budo index.js:bundle.js --live --wg=*.{html,css} --wg=three.js"
   },
   "keywords": [],
   "repository": {

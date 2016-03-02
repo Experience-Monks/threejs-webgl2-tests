@@ -1,7 +1,7 @@
 #version 300 es
 
-in vec4 position;
-in float instanceIndex;
+layout(location=0) in vec4 position;
+layout(location=1) in float instanceIndex;
 out vec3 offset;
 
 uniform float animation;

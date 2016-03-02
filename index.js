@@ -1,3 +1,4 @@
+global.THREE = require('three.js');
 const createApp = require('./app');
 const createLoop = require('raf-loop');
 const glslify = require('glslify');
@@ -43,6 +44,7 @@ function setupScene () {
     fragmentShader: glslify('./shaders/color.frag'),
     uniforms: {}
   });
+  renderMaterial.index0AttributeName = 'position';
 
   const dataMaterial = new THREE.RawShaderMaterial({
     vertexShader: glslify('./shaders/motion.vert'),
@@ -55,6 +57,7 @@ function setupScene () {
       varyings: [ 'offset' ]
     }
   });
+  dataMaterial.index0AttributeName = 'position';
 
   const dataPoints = new THREE.Points(dataGeometry, dataMaterial);
   dataPoints.frustumCulled = false;
@@ -92,6 +95,7 @@ function setupScene () {
 
     // Render instanced meshes
     renderer.render(scene, camera);
+    
   }).start(); 
 }
 
