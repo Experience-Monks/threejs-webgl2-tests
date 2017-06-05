@@ -33,8 +33,8 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
     "babelify": "^7.2.0",
-    "budo": "^8.0.4",
-    "glslify": "^5.0.2",
+    "budo": "^10.0.3",
+    "glslify": "^6.1.0",
     "semistandard": "^7.0.5"
   },
   "scripts": {

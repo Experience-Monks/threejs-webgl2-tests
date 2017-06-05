@@ -1,4 +1,4 @@
-global.THREE = require('three.js');
+global.THREE = require('./three.js');
 const createApp = require('./app');
 const createLoop = require('raf-loop');
 const glslify = require('glslify');
